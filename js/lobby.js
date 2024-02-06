@@ -1,18 +1,27 @@
-let form = document.getElementById('lobby__form')
+// Get the lobby form element
+let form = document.getElementById('lobby__form');
 
-let displayName = sessionStorage.getItem('display_name')
+// Get the display name from sessionStorage and set it as the default value in the form
+let displayName = sessionStorage.getItem('display_name');
 if(displayName){
-    form.name.value = displayName
+    form.name.value = displayName;
 }
 
+// Event listener for form submission
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    sessionStorage.setItem('display_name', e.target.name.value)
+    // Set the display name in sessionStorage from the form input
+    sessionStorage.setItem('display_name', e.target.name.value);
 
-    let inviteCode = e.target.room.value
+    // Get the invite code from the form input
+    let inviteCode = e.target.room.value;
+
+    // If no invite code is provided, generate a random one
     if(!inviteCode){
-        inviteCode = String(Math.floor(Math.random() * 10000))
+        inviteCode = String(Math.floor(Math.random() * 10000));
     }
-    window.location = `room.html?room=${inviteCode}`
-})
+
+    // Redirect to the room.html page with the invite code as a query parameter
+    window.location = `room.html?room=${inviteCode}`;
+});
