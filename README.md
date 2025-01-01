@@ -1,8 +1,8 @@
-# Connext
+# Connectify
 
 **Real-Time Group Video Calling Web Application using WebRTC and Agora**
 
-**Live website link : [Connext](https://connext-chat.netlify.app/)**
+**Live website link : [Connectify](https://connectify-dev.netlify.app/)**
 
 Web application for real-time group video calling, employing HTML, CSS, JS, WebRTC, and the Agora platform.
 
