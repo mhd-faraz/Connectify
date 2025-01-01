@@ -1,5 +1,5 @@
 // Agora App ID
-const APP_ID = "be8d85ca361c481e9b4cd37ada6e5e9a";
+const APP_ID = "99603d9f6c784b2bbc1f4e3a5aa45769";
 
 // Get or create a unique user ID for the session
 let uid = sessionStorage.getItem('uid')
